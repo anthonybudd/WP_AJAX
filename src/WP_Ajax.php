@@ -29,7 +29,7 @@ Abstract Class WP_AJAX
 		}
 	}
 
-	public function boot()
+	public static function boot()
 	{ 	
 		$class = Self::getClassName();
 		$action = new $class;
