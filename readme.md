@@ -2,7 +2,8 @@
 
 <p align="center"><img src="https://ideea.co.uk/static/wp_ajax.png"></p>
 
-### A simple class for creating AJAX actions in WordPress
+### Simple Controllers for WordPress
+WP_AJAX is a class for interfacing with WordPress’s built in AJAX system. This class is designed to fully abstract the developer from the traditional hook based system to a clean controller style structure. Simply define the class, echo urls with url($params = []) method and write what code you want to execute in the run() method.
 
 
 ## Introduction: **[Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26)**
