@@ -9,19 +9,34 @@
 
 ```php
 
-Class ExampleAJAX extends WP_AJAX
-{
-    protected $action = 'example';
+Class ExampleAction extends WP_AJAX{
+
+    protected $action = 'example-action';
 
     protected function run(){
-        echo "Sucess!";
+
+    	// Your Code Here!
+    	
+    	update_option('name', $this->get('name'));
+
     }
 }
 
-ExampleAJAX::listen();
+ExampleAction::listen();
 
-// http://example.com/wp-admin/admin-ajax.php?action=example
+// http://example.com/wp-admin/admin-ajax.php?action=example-action
 
+```
+
+```JS
+$.post('http://example.com/wp-admin/admin-ajax.php',
+{
+    action: 'example-action',
+    name: $('.name-field').val(),
+},
+function(data){
+    console.log(data)
+}, 'JSON');
 ```
 
 # Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
