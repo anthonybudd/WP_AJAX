@@ -41,8 +41,6 @@ function(data){
 
 # Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
 
-***
-
 ### Features
 
 * Simple to use
