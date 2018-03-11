@@ -40,18 +40,9 @@ function(data){
 ```
 script.js
 
-# Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
+## Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
 
-### Features
-
-* Simple to use
-* Automatiocaaly dies when finished
-* Lots of useful helpers
-
-
-***
-
-### Installation
+# Installation
 
 Require WP_AJAX with composer
 
@@ -69,7 +60,7 @@ Download the WP_AJAX class and require it at the top of your functions.php file.
 
 ***
 
-### Setup
+# Setup
 You will need to create a new class that extends WP_AJAX. This class must have one protected property called $action and one protected method named run(). $action will be the AJAX action name [See wp_ajax_(action)](https://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action)).
 ```php
 Class Example extends WP_AJAX
@@ -84,7 +75,7 @@ Class Example extends WP_AJAX
 
 ***
 
-### Listen
+# Listen
 Next you have to call the static method listen(). This will create all of the hooks so WordPress knows to call the run() method when the correct AJAX endpoint is hit. Note: You will need to call the listen() method for each of your AJAX actions.
 ```php
 ExampleAJAX::listen();
@@ -135,9 +126,8 @@ $this->requestType('POST'); // Returns (bool)
 $this->requestType(['POST', 'PUT']); // Returns (bool)  
 ```
 
-***
 
-### Example
+# Example
 ```php
 Class CreatePost extends WP_AJAX
 {
