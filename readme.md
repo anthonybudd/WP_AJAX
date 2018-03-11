@@ -27,6 +27,11 @@ ExampleAction::listen();
 ```
 ExampleAction.php
 
+```html
+<a href="<?= ExampleAction::url(['name' => 'Anthony Budd']) ?>" >This is a link</a>
+```
+
+#### Or
 
 ```JS
 $('.submit-btn').click(function(){
