@@ -23,7 +23,8 @@ Class ExampleAction extends WP_AJAX{
 }
 ExampleAction::listen();
 
-// http://example.com/wp-admin/admin-ajax.php?action=example-action
+ExampleAction::url() // http://example.com/wp-admin/admin-ajax.php?action=example-action
+ExampleAction::url(['name' => 'Anthony Budd']) // http://example.com/wp-admin/admin-ajax.php?action=example-action&name=Anthony%20Budd
 
 ```
 ExampleAction.php
