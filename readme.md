@@ -29,14 +29,14 @@ ExampleAction.php
 
 
 ```JS
-$.post('http://example.com/wp-admin/admin-ajax.php',
-{
-    action: 'example-action',
-    name: $('.name-field').val(),
-},
-function(data){
-    console.log(data)
-}, 'JSON');
+$('.submit-btn').click(function(){
+    $.post('http://example.com/wp-admin/admin-ajax.php',{
+        action: 'example-action',
+        name: $('.name-field').val(),
+    },function(data){
+        console.log(data)
+    }, 'JSON');
+});
 ```
 script.js
 
