@@ -8,7 +8,6 @@
 ## Introduction: **[Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26)**
 
 ```php
-
 Class ExampleAction extends WP_AJAX{
 
     protected $action = 'example-action';
@@ -21,12 +20,13 @@ Class ExampleAction extends WP_AJAX{
 
     }
 }
-
 ExampleAction::listen();
 
 // http://example.com/wp-admin/admin-ajax.php?action=example-action
 
 ```
+ExampleAction.php
+
 
 ```JS
 $.post('http://example.com/wp-admin/admin-ajax.php',
@@ -38,6 +38,7 @@ function(data){
     console.log(data)
 }, 'JSON');
 ```
+script.js
 
 # Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
 
