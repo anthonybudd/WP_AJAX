@@ -1,8 +1,8 @@
-# WP_AJAX - OOP AJAX Actions for WordPress
+# WP_AJAX
 
 <p align="center"><img src="https://ideea.co.uk/static/wp_ajax.png"></p>
 
-### A simple class for creating active record models of WordPress Posts.
+### A simple class for creating AJAX actions in WordPress
 
 
 ## Introduction: **[Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26)**
@@ -39,8 +39,6 @@ function(data){
 }, 'JSON');
 ```
 script.js
-
-## Introduction: [Medium Post](https://medium.com/@AnthonyBudd/wp-ajax-97d8f1d83e26#.pzyhw22zd)
 
 # Installation
 
