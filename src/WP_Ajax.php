@@ -56,8 +56,12 @@ Abstract Class WP_AJAX
 	{
 		return get_called_class();
 	}
+	
+	public static function formURL(){
+		return admin_url('/admin-ajax.php');
+	}
 
-	public static function getActionName()
+	public static function action()
 	{
 		$class = Self::getClassName();
 		$reflection = new ReflectionClass($class);
@@ -71,10 +75,27 @@ Abstract Class WP_AJAX
 
 	// -----------------------------------------------------
 	// JSONResponse
-	// -----------------------------------------------------
-	public function JSONResponse($response)
-	{
-		wp_send_json($response);
+	// -----------------------------------------------------	
+	public function returnBack(){
+		if(isset($_SERVER['HTTP_REFERER'])){
+			header('Location: '. $_SERVER['HTTP_REFERER']);	
+			die();
+		}
+
+		return FALSE;
+	}
+
+	public function returnRedirect($url, $params = array()){
+		$url .= '?'. http_build_query($params);
+		ob_clean();
+		header('Location: '. $url);
+		die();
+	}
+
+	public function returnJSON($data){
+		header('Content-Type: application/json');
+		echo json_encode($data);
+		die;
 	}
 
 	// -----------------------------------------------------
